@@ -23,6 +23,7 @@ function assertArraysEqual(boolean) {
   }
 }
 
+// Different attempt still need to fix
 // function without(source, itemsToRemove) {
 //   // delcare new array
 //   let newArr = [];
