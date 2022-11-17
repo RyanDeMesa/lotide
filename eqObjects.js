@@ -7,10 +7,11 @@ const assertEqual = function (actual, expected) {
 };
 
 function eqArrays(arr1, arr2) {
-  // loop through arr1
+  // checks if the arrays are the same length
   if (arr1.length !== arr2.length) {
     return false;
   }
+  // loops through the array
   for (let i = 0; i < arr1.length; i++) {
     // compare current value of arr1 to current value arr2
     if (arr1[i] === arr2[i]) {
@@ -51,16 +52,13 @@ const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
 const abc = { a: "1", b: "2", c: "3" };
 
+// test code
 console.log(eqObjects(cd, dc)); // true
 console.log(eqObjects(cd, cd2)); // false
+console.log(eqObjects(ab, ba)); // => true
+console.log(eqObjects(ab, abc)); // => false
 
-// test code
-
-// console.log(eqObjects(ab, ba)); // => true
-// // assertEqual(ab, ba);
-// console.log(eqObjects(ab, abc)); // => false
-// // assertEqual(ab, abc);
-
-// assertEqual(eqObjects(cd, dc), true); // => true
-
-// assertEqual(eqObjects(cd, cd2), false); // => false
+// assertEqual(ab, abc);
+// assertEqual(ab, ba);
+assertEqual(eqObjects(cd, dc), true); // => true
+assertEqual(eqObjects(cd, cd2), false); // => false
