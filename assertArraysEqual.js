@@ -15,13 +15,19 @@ function eqArrays(arr1, arr2) {
   }
 }
 
-function assertArraysEqual(boolean) {
-  if (boolean === true) {
-    console.log("These arrays are the same!");
-  } else {
-    console.log("These arrays are not the same!");
+const assertArraysEqual = function(arr1, arr2){
+  for (let i = 0; i < arr1.length; i++) {
+    // loop through arr2
+    for (let x = 0; x < arr2.length; x++) {
+      // compare current value of arr1 to current value arr2
+      if (arr1[i] === arr2[x]) {
+        return `✅✅✅ Assertion Passed: actual === expected`;
+      } else {
+        return `🛑🛑🛑 Assertion Failed: actual !== expected`;
+      }
+    }
   }
 }
 
-assertArraysEqual(eqArrays([1, 2, 3], [3, 2, 1]));
-assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]));
+console.log(assertArraysEqual([1, 2, 3], [3, 2, 1]));
+console.log(assertArraysEqual([1, 2, 3], [1, 2, 3]));
