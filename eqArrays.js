@@ -16,7 +16,5 @@ function eqArrays(arr1, arr2) {
   }
 }
 
-eqArrays([1, 2, 3], [3, 2 ,1])
-// const assertArraysEqual = require('./assertArraysEqual');
 module.exports = eqArrays;
 
