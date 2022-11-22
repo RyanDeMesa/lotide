@@ -47,3 +47,6 @@ console.log(results2);
 
 const results3 = map(numbers, (square) => square * 2);
 console.log(results3);
+
+
+module.exports = map;

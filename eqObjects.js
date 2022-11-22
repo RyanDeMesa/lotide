@@ -62,3 +62,5 @@ console.log(eqObjects(ab, abc)); // => false
 // assertEqual(ab, ba);
 assertEqual(eqObjects(cd, dc), true); // => true
 assertEqual(eqObjects(cd, cd2), false); // => false
+
+module.exports = eqObjects;

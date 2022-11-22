@@ -27,3 +27,4 @@ const assertObjectsEqual = function(object1, object2) {
 
 console.log(assertObjectsEqual({hi: 1}, {hi: 1}));
 console.log(assertObjectsEqual({hi: 1}, {hi: 2}));
+module.exports = assertObjectsEqual;
